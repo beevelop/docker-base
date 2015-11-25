@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker build -t beevelop/base .
+  - docker run beevelop/base /bin/sh -c "exit 0"
