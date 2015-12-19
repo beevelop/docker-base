@@ -3,6 +3,8 @@
 [![ImageLayer](https://badge.imagelayers.io/beevelop/base:latest.svg)](https://imagelayers.io/?images=beevelop/base:latest)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
+![beevelop/base](/icon.png?raw=true)
+
 # base
 ### based on Ubuntu 15.10 (Wily Werewolf)
 ----
