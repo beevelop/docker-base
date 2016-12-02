@@ -1,4 +1,4 @@
-FROM ubuntu-debootstrap:wily
+FROM ubuntu:xenial
 
 MAINTAINER Maik Hummel <m@ikhummel.com>
 
