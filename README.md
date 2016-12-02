@@ -6,7 +6,7 @@
 
 ![beevelop/base](/icon.png?raw=true)
 # base
-### based on Ubuntu 15.10 (Wily Werewolf)
+### based on Ubuntu 16.04 (Xenial Xerus)
 ----
 ### Pull from Docker Hub
 ```
