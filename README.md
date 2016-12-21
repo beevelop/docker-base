@@ -1,12 +1,13 @@
-[![Travis](https://img.shields.io/travis/beevelop/docker-base.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-base)
-[![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/base.svg?style=flat-square)](https://links.beevelop.com/d-base)
-[![ImageLayer](https://badge.imagelayers.io/beevelop/base:latest.svg)](https://imagelayers.io/?images=beevelop/base:latest)
+[![Travis](https://shields.beevelop.com/travis/beevelop/docker-base.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-base)
+[![Pulls](https://shields.beevelop.com/docker/pulls/beevelop/base.svg?style=flat-square)](https://links.beevelop.com/d-base)
+[![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
+[![Size](https://shields.beevelop.com/docker/image/size/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
+[![Release](https://shields.beevelop.com/github/release/beevelop/docker-base.svg?style=flat-square)](https://github.com/beevelop/docker-base/releases)
+![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-
 ![beevelop/base](/icon.png?raw=true)
-# base
-### based on Ubuntu 16.04 (Xenial Xerus)
+# Beevelop's base image (`FROM Ubuntu 16.04`)
 ----
 ### Pull from Docker Hub
 ```
