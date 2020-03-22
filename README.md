@@ -7,7 +7,7 @@
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
 ![beevelop/base](/icon.png?raw=true)
-# Beevelop's base image (`FROM Ubuntu 16.04`)
+# Beevelop's base image (`FROM Ubuntu 18.04`)
 ----
 ### Pull from Docker Hub
 ```
