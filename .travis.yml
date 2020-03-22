@@ -4,5 +4,5 @@ services:
   - docker
 
 script:
-  - docker build -t beevelop/base .
-  - docker run beevelop/base /bin/sh -c "exit 0"
+  - docker build -t bee .
+  - docker run bee /bin/sh -c "exit 0"
