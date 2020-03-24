@@ -8,8 +8,8 @@
 
 ![beevelop/base](/icon.png?raw=true)
 # Beevelop's base image (`FROM Ubuntu 18.04`)
-----
-### Pull from Docker Hub
+
+### Pull newest build from Docker Hub
 ```
 docker pull beevelop/base:latest
 ```
@@ -21,10 +21,14 @@ docker build -t beevelop/base github.com/beevelop/docker-base
 
 ### Run image
 ```
-docker run -it beevelop/base bash
+docker run -it beevelop/base:latest bash
 ```
 
 ### Use as base image
 ```Dockerfile
 FROM beevelop/base:latest
 ```
+
+### Alternative tag
+If you want to ensure that your project stays on Ubuntu 18.04 next time the `latest` tag is updated, you can use `beevelop/base:bionic`.
+
