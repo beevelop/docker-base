@@ -1,4 +1,3 @@
-[![Travis](https://shields.beevelop.com/travis/beevelop/docker-base.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-base)
 [![Pulls](https://shields.beevelop.com/docker/pulls/beevelop/base.svg?style=flat-square)](https://links.beevelop.com/d-base)
 [![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
 [![Size](https://shields.beevelop.com/docker/image/size/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
@@ -6,8 +5,8 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-![beevelop/base](/icon.png?raw=true)
-# Beevelop's base image (`FROM Ubuntu 18.04`)
+![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
+# Beevelop's base image (`FROM Ubuntu 20.04`)
 
 ### Pull newest build from Docker Hub
 ```
