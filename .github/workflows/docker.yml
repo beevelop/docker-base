@@ -6,10 +6,9 @@ on:
   push:
     branches: ["**"]
     tags: ["v*.*.*"]
-  pull_request:
 
 env:
-  imageName: beevelop/base
+  platforms: linux/amd64,linux/arm64/v8,linux/arm/v7,linux/s390x,linux/ppc64le
 
 jobs:
   main:
@@ -18,6 +17,12 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+      - name: Set imageName based on the repository name
+        id: step_one
+        run: |
+            imageName="${GITHUB_REPOSITORY/docker-/}"
+            echo $imageName
+            echo "imageName=$imageName" >> $GITHUB_ENV
       - name: Docker meta
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
@@ -43,7 +48,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7
+          platforms: ${{ env.platforms }}
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
