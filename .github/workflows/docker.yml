@@ -1,8 +1,11 @@
 name: Docker Image
 
 on:
+  schedule:
+    - cron: "0 10 * * *" # everyday at 10am
   push:
-    branches: [master]
+    branches: ["**"]
+    tags: ["v*.*.*"]
   pull_request:
 
 env:
@@ -38,9 +41,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          platforms: linux/amd64
+          platforms: linux/amd64,linux/arm64,linux/386
           push: true
-          # push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
           cache-from: type=local,src=${{ github.workspace }}/cache
