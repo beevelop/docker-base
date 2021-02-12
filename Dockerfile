@@ -18,5 +18,8 @@ LABEL maintainer="hi@beevelop.com" \
       org.opencontainers.image.documentation="https://github.com/beevelop/docker-base/blob/master/README.md" \
       org.opencontainers.image.source="https://github.com/beevelop/docker-base.git"
 
+RUN apt-get update && apt-get upgrade -y &&
+      rm -rf /var/lib/apt/lists/*
+
 ENV DEBIAN_FRONTEND=noninteractive \
-    TERM=xterm
+      TERM=xterm
