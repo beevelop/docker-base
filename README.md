@@ -1,4 +1,3 @@
-[![Travis](https://shields.beevelop.com/travis/beevelop/docker-base.svg?style=flat-square)](https://travis-ci.org/beevelop/docker-base)
 [![Pulls](https://shields.beevelop.com/docker/pulls/beevelop/base.svg?style=flat-square)](https://links.beevelop.com/d-base)
 [![Layers](https://shields.beevelop.com/docker/image/layers/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
 [![Size](https://shields.beevelop.com/docker/image/size/beevelop/base/latest.svg?style=flat-square)](https://links.beevelop.com/d-base)
