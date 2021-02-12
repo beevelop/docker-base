@@ -6,7 +6,7 @@
 ![Badges](https://shields.beevelop.com/badge/badges-7-brightgreen.svg?style=flat-square)
 [![Beevelop](https://links.beevelop.com/honey-badge)](https://beevelop.com)
 
-![beevelop/base](/icon.png?raw=true)
+![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
 # Beevelop's base image (`FROM Ubuntu 20.04`)
 
 ### Pull newest build from Docker Hub
