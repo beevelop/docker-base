@@ -13,7 +13,8 @@ env:
 
 jobs:
   main:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    timeout-minutes: 5
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
@@ -47,3 +48,14 @@ jobs:
           labels: ${{ steps.docker_meta.outputs.labels }}
           cache-from: type=local,src=${{ github.workspace }}/cache
           cache-to: type=local,dest=${{ github.workspace }}/cache
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.imageName }}
+          format: "template"
+          template: "@/contrib/sarif.tpl"
+          output: "trivy-results.sarif"
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: "trivy-results.sarif"
