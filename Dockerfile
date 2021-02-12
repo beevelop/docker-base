@@ -18,7 +18,7 @@ LABEL maintainer="hi@beevelop.com" \
       org.opencontainers.image.documentation="https://github.com/beevelop/docker-base/blob/master/README.md" \
       org.opencontainers.image.source="https://github.com/beevelop/docker-base.git"
 
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections && apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
-
 ENV DEBIAN_FRONTEND=noninteractive \
       TERM=xterm
+
+RUN apt-get update && apt-get upgrade -y && rm -rf /var/lib/apt/lists/*
