@@ -8,6 +8,8 @@
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
 # Beevelop's base image (`FROM Ubuntu 20.04`)
 
+[![dockeri.co](https://dockeri.co/image/beevelop/base)](https://hub.docker.com/r/beevelop/base)
+
 ### Pull newest build from Docker Hub
 ```
 docker pull beevelop/base:latest
