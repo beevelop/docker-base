@@ -32,7 +32,3 @@ docker run -it beevelop/base:latest bash
 ```Dockerfile
 FROM beevelop/base:latest
 ```
-
-### Alternative tag
-If you want to ensure that your project stays on Ubuntu 18.04 next time the `latest` tag is updated, you can use `beevelop/base:bionic`.
-

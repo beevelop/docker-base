@@ -20,9 +20,9 @@ jobs:
       - name: Set imageName based on the repository name
         id: step_one
         run: |
-            imageName="${GITHUB_REPOSITORY/docker-/}"
-            echo $imageName
-            echo "imageName=$imageName" >> $GITHUB_ENV
+          imageName="${GITHUB_REPOSITORY/docker-/}"
+          echo $imageName
+          echo "imageName=$imageName" >> $GITHUB_ENV
       - name: Docker meta
         id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v1
