@@ -9,26 +9,31 @@
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
-# Beevelop's base image (`FROM Ubuntu 20.04`)
+# Beevelop's base image (`Ubuntu 20.04`)
 
-[![dockeri.co](https://dockeri.co/image/beevelop/base)](https://hub.docker.com/r/beevelop/base)
+### Pull, build or run this image
+```bash
+# pull the most recent tag / release
+docker pull beevelop/base:v2021.06.2
 
-### Pull newest build from Docker Hub
-```
-docker pull beevelop/base:latest
-```
+# or run the image interactively
+docker run --rm --name beevelop -it beevelop/base:v2021.06.2 bash
 
-### Build from GitHub
-```
+# or build the image from GitHub
 docker build -t beevelop/base github.com/beevelop/docker-base
 ```
 
-### Run image
-```
-docker run -it beevelop/base:latest bash
+### Or use as base image
+```Dockerfile
+FROM beevelop/base:v2021.06.2
 ```
 
-### Use as base image
-```Dockerfile
-FROM beevelop/base:latest
-```
+---
+
+![Beevelop's Docker Image Hierarchy](https://gist.githubusercontent.com/beevelop/b0cddab7209a683c77560d06ff00bc8e/raw/15429ee1d02e2c4dc019b760ca8c7ceff5911b82/hierarchy.png)
+
+---
+
+### Use tags where possible, because...
+
+![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
