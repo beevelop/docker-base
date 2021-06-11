@@ -11,23 +11,23 @@
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
 # Beevelop's base image (`Ubuntu 20.04`)
 
-[![dockeri.co](https://dockeri.co/image/beevelop/base)](https://hub.docker.com/r/beevelop/base)
-
 ### Pull, build or run this image
 ```bash
 docker pull beevelop/base:v2021.06.2
 
-# builds the image from GitHub
-docker build -t beevelop/base github.com/beevelop/docker-base
-
 # run the image interactively
 docker run --rm --name beevelop -it beevelop/base:v2021.06.2 bash
+
+# builds the image from GitHub
+docker build -t beevelop/base github.com/beevelop/docker-base
 ```
 
 ### Or use as base image
 ```Dockerfile
 FROM beevelop/base:latest
 ```
+
+---
 
 ![Beevelop's Docker Image Hierarchy](https://gist.githubusercontent.com/beevelop/b0cddab7209a683c77560d06ff00bc8e/raw/15429ee1d02e2c4dc019b760ca8c7ceff5911b82/hierarchy.png)
 
