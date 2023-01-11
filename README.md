@@ -1,4 +1,4 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/beevelop/docker-base/Docker%20Image?style=for-the-badge)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-base/docker.yml?style=for-the-badge)
 ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/base.svg?style=for-the-badge)
 ![Docker Stars](https://img.shields.io/docker/stars/beevelop/base?style=for-the-badge)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/base/latest?style=for-the-badge)
@@ -9,9 +9,11 @@
 [![Beevelop](https://img.shields.io/badge/-%20Made%20with%20%F0%9F%8D%AF%20by%20%F0%9F%90%9Dvelop-blue.svg?style=for-the-badge)](https://beevelop.com)
 
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
+
 # Beevelop's base image (`Ubuntu 20.04`)
 
 ### Pull, build or run this image
+
 ```bash
 # pull the most recent tag / release
 docker pull beevelop/base:v2022.06.3
@@ -24,6 +26,7 @@ docker build -t beevelop/base github.com/beevelop/docker-base
 ```
 
 ### Or use as base image
+
 ```Dockerfile
 FROM beevelop/base:v2022.06.3
 ```
@@ -34,6 +37,6 @@ FROM beevelop/base:v2022.06.3
 
 ---
 
-### Use tags where possible, because...
+### Use tags where possible, because
 
 ![One does not simply use latest](https://i.imgflip.com/1fgwxr.jpg)
