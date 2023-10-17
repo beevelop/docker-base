@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 LABEL maintainer="hi@beevelop.com" \
       org.label-schema.schema-version="1.0" \
