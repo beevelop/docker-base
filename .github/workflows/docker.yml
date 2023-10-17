@@ -19,6 +19,7 @@ jobs:
       contents: read
       packages: write
       pull-requests: write
+      security-events: write
 
     steps:
       - name: Check out the repo
