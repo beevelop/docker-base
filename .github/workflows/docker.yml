@@ -52,6 +52,7 @@ jobs:
         uses: docker/scout-action@v1
         with:
           command: cves,recommendations,compare
+          organization: beevelop
           image: ${{ steps.docker_meta.outputs.tags }}
           to-latest: true
           ignore-unchanged: true
