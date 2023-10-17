@@ -10,7 +10,7 @@
 
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
 
-# Beevelop's base image (`Ubuntu 20.04`)
+# Beevelop's base image (`Ubuntu 22.04`)
 
 ### Pull, build or run this image
 
