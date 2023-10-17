@@ -3,8 +3,10 @@ name: Docker Image
 on:
   schedule:
     - cron: "0 10 * * *" # everyday at 10am
+  pull_request_target:
+    branches: ["latest"]
   push:
-    branches: ["**"]
+    branches: ["latest"]
     tags: ["v*.*.*"]
 
 env:
@@ -12,8 +14,15 @@ env:
 
 jobs:
   main:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 5
+
+    permissions:
+      contents: read
+      packages: write
+      pull-requests: write
+      security-events: write
+
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
@@ -45,13 +54,36 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
-      - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+      
+      - name: Docker Scout
+        id: docker-scout-cves
+        if: ${{ github.event_name != 'pull_request_target' }}
+        uses: docker/scout-action@v1
         with:
-          image-ref: ${{ env.imageName }}:${{ steps.docker_meta.outputs.version }}
-          format: "sarif"
-          output: "trivy-results.sarif"
-      - name: Upload Trivy scan results to GitHub Security tab
+          command: cves
+          organization: beevelop
+          image: ${{ steps.docker_meta.outputs.tags }}
+          to-latest: true
+          github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
+          sarif-file: sarif.output.json
+
+      - name: Upload SARIF result
+        id: upload-sarif
+        if: ${{ github.event_name != 'pull_request_target' }}
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: "trivy-results.sarif"
+          sarif_file: sarif.output.json
+
+      - name: Compare to deployed image
+        id: docker-scout-compare
+        if: ${{ github.event_name == 'pull_request_target' }}
+        uses: docker/scout-action@main
+        with:
+          command: compare
+          organization: beevelop
+          image: ${{ steps.docker_meta.outputs.tags }}
+          only-severities: critical,high
+          platform: "linux/amd64"
+          exit-code: true       
+          summary: true
+
