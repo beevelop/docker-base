@@ -3,8 +3,10 @@ name: Docker Image
 on:
   schedule:
     - cron: "0 10 * * *" # everyday at 10am
+  pull_request_target:
+    branches: ["latest"]
   push:
-    branches: ["**"]
+    branches: ["latest"]
     tags: ["v*.*.*"]
 
 env:
