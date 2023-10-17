@@ -33,7 +33,17 @@ FROM beevelop/base:v2023.10.2
 
 ---
 
-![Beevelop's Docker Image Hierarchy](https://gist.githubusercontent.com/beevelop/b0cddab7209a683c77560d06ff00bc8e/raw/15429ee1d02e2c4dc019b760ca8c7ceff5911b82/hierarchy.png)
+# All Docker images
+
+| Badge | Pulls | Image Size (tag) | Release |
+| --- | --- | --- | --- |
+| ![base](https://img.shields.io/badge/beevelop%2Fbase-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/base.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/base/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-base.svg?style=flat-square) |
+| ![java](https://img.shields.io/badge/beevelop%2Fjava-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/java.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/java/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-java.svg?style=flat-square) |
+| ![android](https://img.shields.io/badge/beevelop%2Fandroid-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/android/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-android.svg?style=flat-square) |
+| ![android-nodejs](https://img.shields.io/badge/beevelop%2Fandroid_nodejs-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/android-nodejs.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/android-nodejs/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-android-nodejs.svg?style=flat-square) |
+| ![cordova](https://img.shields.io/badge/beevelop%2Fcordova-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/cordova.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/cordova/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-cordova.svg?style=flat-square) |
+| ![ionic](https://img.shields.io/badge/beevelop%2Fionic-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/ionic.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/ionic/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-ionic.svg?style=flat-square) |
+| ![nginx-basic-auth](https://img.shields.io/badge/beevelop%2Fnginx_basic_auth-grey?style=flat-square&logo=github) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/nginx-basic-auth.svg?style=flat-square) | ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/beevelop/nginx-basic-auth/latest?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-nginx-basic-auth.svg?style=flat-square) |
 
 ---
 
