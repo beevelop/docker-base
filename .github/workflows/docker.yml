@@ -62,7 +62,7 @@ jobs:
         with:
           command: cves
           organization: beevelop
-          image: ${{ steps.docker_meta.outputs.tags }}
+          image: ${{ env.imageName }}:latest
           to-latest: true
           github-token: ${{ secrets.GITHUB_TOKEN }} # to be able to write the comment
           sarif-file: sarif.output.json
