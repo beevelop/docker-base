@@ -77,13 +77,13 @@ jobs:
       - name: Compare to deployed image
         id: docker-scout-compare
         if: ${{ github.event_name == 'pull_request_target' }}
-        uses: docker/scout-action@v1.0.9
+        uses: docker/scout-action@main
         with:
           command: compare
           organization: beevelop
           image: ${{ steps.docker_meta.outputs.tags }}
           only-severities: critical,high
           platform: "linux/amd64"
-          exit-code: true       
+          exit-on: vulnerability,policy
           summary: true
 
