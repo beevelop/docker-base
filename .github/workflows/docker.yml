@@ -84,6 +84,6 @@ jobs:
           image: ${{ steps.docker_meta.outputs.tags }}
           only-severities: critical,high
           platform: "linux/amd64"
-          exit-code: true       
+          exit-on: vulnerability,policy
           summary: true
 
