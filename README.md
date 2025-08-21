@@ -16,10 +16,10 @@
 
 ```bash
 # pull the most recent tag / release
-docker pull beevelop/base:v2025.08.2
+docker pull beevelop/base:v2025.08.3
 
 # or run the image interactively
-docker run --rm --name beevelop -it beevelop/base:v2025.08.2 bash
+docker run --rm --name beevelop -it beevelop/base:v2025.08.3 bash
 
 # or build the image from GitHub
 docker build -t beevelop/base github.com/beevelop/docker-base
@@ -28,7 +28,7 @@ docker build -t beevelop/base github.com/beevelop/docker-base
 ### Or use as base image
 
 ```Dockerfile
-FROM beevelop/base:v2025.08.2
+FROM beevelop/base:v2025.08.3
 ```
 
 ---
