@@ -10,22 +10,26 @@
 
 ![beevelop/base](https://raw.githubusercontent.com/beevelop/docker-base/master/icon.png?raw=true)
 
-# Beevelop's base image (`Ubuntu 24.04 LTS`)
+# Docker Ubuntu Base - Lightweight Development Foundation
 
-### Pull, build or run this image
+> Minimal Ubuntu 24.04 LTS Docker image optimized for development workflows, CI/CD pipelines, and as a foundation for other containerized applications.
+
+## Usage
+
+### Pull and Run
 
 ```bash
-# pull the most recent tag / release
+# Pull the latest release
 docker pull beevelop/base:v2025.08.4
 
-# or run the image interactively
-docker run --rm --name beevelop -it beevelop/base:v2025.08.4 bash
+# Run interactively
+docker run --rm -it beevelop/base:v2025.08.4 bash
 
-# or build the image from GitHub
+# Build from source
 docker build -t beevelop/base github.com/beevelop/docker-base
 ```
 
-### Or use as base image
+### Use as Base Image
 
 ```Dockerfile
 FROM beevelop/base:v2025.08.4
@@ -46,6 +50,8 @@ FROM beevelop/base:v2025.08.4
 | [![nginx-basic-auth](https://img.shields.io/badge/beevelop%2Fnginx_basic_auth-grey?style=flat-square&logo=github)](https://github.com/beevelop/docker-nginx-basic-auth) | ![Docker Pulls](https://img.shields.io/docker/pulls/beevelop/nginx-basic-auth.svg?style=flat-square) | ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/beevelop/docker-nginx-basic-auth/docker.yml?style=flat-square) | ![GitHub Release Date](https://img.shields.io/github/release-date/beevelop/docker-nginx-basic-auth?style=flat-square) | ![GitHub release](https://img.shields.io/github/release/beevelop/docker-nginx-basic-auth.svg?style=flat-square) |
 
 ---
+
+![Beevelop's Docker Image Hierarchy](https://gist.githubusercontent.com/beevelop/b0cddab7209a683c77560d06ff00bc8e/raw/15429ee1d02e2c4dc019b760ca8c7ceff5911b82/hierarchy.png)
 
 ### Use tags where possible, because
 
