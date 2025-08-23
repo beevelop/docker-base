@@ -3,11 +3,11 @@ schemaVersion: '2.0.0'
 commandTests:
   - name: "Ubuntu version"
     command: ["cat", "/etc/os-release"]
-    expectedOutput: ["Ubuntu 24.04"]
+    expectedOutput: "Ubuntu 24.04"
   
   - name: "Environment check"
     command: ["printenv", "DEBIAN_FRONTEND"]
-    expectedOutput: ["noninteractive"]
+    expectedOutput: "noninteractive"
 
 fileExistenceTests:
   - name: "OS release file"
@@ -15,7 +15,7 @@ fileExistenceTests:
     shouldExist: true
 
 metadataTest:
-  env:
+  envVars:
     - key: "DEBIAN_FRONTEND"
       value: "noninteractive"
     - key: "TERM"
