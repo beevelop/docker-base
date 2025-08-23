@@ -33,6 +33,20 @@ docker build -t beevelop/base github.com/beevelop/docker-base
 
 ```Dockerfile
 FROM beevelop/base:v2025.08.4
+
+# Switch to non-root user (recommended)
+USER appuser
+WORKDIR /home/appuser
+```
+
+## Verification
+
+```bash
+# Verify signature (requires cosign)
+cosign verify \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  --certificate-identity-regexp "^https://github.com/beevelop/docker-base/" \
+  beevelop/base:latest
 ```
 
 ---

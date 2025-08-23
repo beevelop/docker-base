@@ -1,0 +1,6 @@
+ignored:
+  - DL3008  # Pin versions - not needed for base image
+
+trustedRegistries:
+  - docker.io
+  - ghcr.io

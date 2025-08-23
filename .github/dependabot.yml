@@ -1,4 +1,5 @@
 version: 2
+
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -7,8 +8,8 @@ updates:
     open-pull-requests-limit: 1
     groups:
       github-actions:
-        patterns:
-          - "*"
+        patterns: ["*"]
+
   - package-ecosystem: "docker"
     directory: "/"
     schedule:
@@ -16,5 +17,4 @@ updates:
     open-pull-requests-limit: 1
     groups:
       docker:
-        patterns:
-          - "*"
+        patterns: ["*"]

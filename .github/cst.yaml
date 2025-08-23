@@ -1,0 +1,26 @@
+schemaVersion: '2.0.0'
+
+commandTests:
+  - name: "Ubuntu version"
+    command: ["cat", "/etc/os-release"]
+    expectedOutput: ["Ubuntu 24.04"]
+  
+  - name: "Environment check"
+    command: ["printenv", "DEBIAN_FRONTEND"]
+    expectedOutput: ["noninteractive"]
+
+fileExistenceTests:
+  - name: "OS release file"
+    path: "/etc/os-release"
+    shouldExist: true
+
+metadataTest:
+  env:
+    - key: "DEBIAN_FRONTEND"
+      value: "noninteractive"
+    - key: "TERM"
+      value: "xterm"
+  
+  user: "root"
+  exposedPorts: []
+  volumes: []
