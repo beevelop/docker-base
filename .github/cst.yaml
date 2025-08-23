@@ -2,12 +2,14 @@ schemaVersion: '2.0.0'
 
 commandTests:
   - name: "Ubuntu version"
-    command: ["cat", "/etc/os-release"]
-    expectedOutput: "Ubuntu 24.04"
-  
+    command: "cat"
+    args: ["/etc/os-release"]
+    expectedOutput: ["Ubuntu 24.04"]
+
   - name: "Environment check"
-    command: ["printenv", "DEBIAN_FRONTEND"]
-    expectedOutput: "noninteractive"
+    command: "printenv"
+    args: ["DEBIAN_FRONTEND"]
+    expectedOutput: ["noninteractive"]
 
 fileExistenceTests:
   - name: "OS release file"
@@ -20,7 +22,7 @@ metadataTest:
       value: "noninteractive"
     - key: "TERM"
       value: "xterm"
-  
-  user: "root"
+
+  user: ""
   exposedPorts: []
   volumes: []
