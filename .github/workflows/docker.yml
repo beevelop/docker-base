@@ -77,11 +77,16 @@ jobs:
             type=sbom
             type=provenance,mode=max
 
+      - name: Tag image for PR
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          docker tag ${{ env.imageName }}:${{ github.head_ref }} ${{ env.imageName }}:pr-${{ github.event.number }}
+
       - name: Container Structure Tests
         if: ${{ github.event_name == 'pull_request' }}
         uses: plexsystems/container-structure-test-action@v0.3.0
         with:
-          image: ${{ env.imageName }}:${{ github.head_ref }}
+          image: ${{ env.imageName }}:pr-${{ github.event.number }}
           config: .github/cst.yaml
 
       - name: Cosign install
