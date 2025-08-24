@@ -77,10 +77,7 @@ jobs:
             type=sbom
             type=provenance,mode=max
 
-      - name: Tag image for PR
-        if: ${{ github.event_name == 'pull_request' }}
-        run: |
-          docker tag ${{ env.imageName }}:${{ github.head_ref }} ${{ env.imageName }}:pr-${{ github.event.number }}
+
 
       - name: Container Structure Tests
         if: ${{ github.event_name == 'pull_request' }}
