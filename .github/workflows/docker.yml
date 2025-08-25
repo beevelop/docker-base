@@ -85,6 +85,7 @@ jobs:
         with:
           image: ${{ env.imageName }}:pr-${{ github.event.number }}
           config: .github/cst.yaml
+          pull: false
 
       - name: Cosign install
         if: ${{ github.event_name != 'pull_request' }}
