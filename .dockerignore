@@ -1,0 +1,96 @@
+# .dockerignore for beevelop/base
+# Optimized to reduce build context size and avoid security issues
+
+# Version control
+.git
+.gitignore
+.gitattributes
+.github
+
+# Documentation and metadata
+README.md
+LICENSE
+CHANGELOG.md
+*.md
+docs/
+examples/
+
+# CI/CD and development files
+.github/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn
+
+# Python (if any)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+.DS_Store
+Thumbs.db
+
+# Build artifacts and caches
+dist/
+build/
+out/
+target/
+.cache/
+
+# Container and deployment files
+docker-compose*.yml
+Dockerfile*
+!Dockerfile
+.dockerignore
+
+# Security sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+.secrets
+
+# Test files and coverage
+test/
+tests/
+spec/
+coverage/
+*.test
+*.spec
+
+# Logs
+*.log
+logs/
+
+# Archives
+*.tar
+*.tar.gz
+*.zip
+*.rar
+
+# IDE and editor files
+*.sublime-*
+.vscode/
+.idea/
+*.iml
