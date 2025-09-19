@@ -32,7 +32,7 @@ jobs:
           ref: ${{ github.head_ref || github.ref }}
 
       - name: Hadolint
-        uses: hadolint/hadolint-action@v3.1.0
+        uses: hadolint/hadolint-action@v3.2.0
         with:
           dockerfile: ./Dockerfile
           config: .github/hadolint.yaml
