@@ -72,7 +72,10 @@ jobs:
           platforms: linux/amd64
           push: false
           pull: true
-          tags: ${{ steps.docker_meta.outputs.tags }}
+          load: true
+          tags: |
+            ${{ steps.docker_meta.outputs.tags }}
+            ${{ env.imageName }}:pr-${{ github.event.number }}
           labels: ${{ steps.docker_meta.outputs.labels }}
 
       - name: Build and push
@@ -101,7 +104,6 @@ jobs:
         with:
           image: ${{ env.imageName }}:pr-${{ github.event.number }}
           config: .github/cst.yaml
-          pull: false
 
       - name: Cosign install
         if: ${{ github.event_name != 'pull_request' }}
