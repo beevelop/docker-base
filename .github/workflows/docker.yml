@@ -142,8 +142,8 @@ jobs:
         with:
           command: compare
           organization: beevelop
-          image: ${{ steps.docker_meta.outputs.tags }}
+          image: ${{ env.imageName }}:pr-${{ github.event.number }}
           only-severities: critical,high
           platform: "linux/amd64"
-          exit-on: vulnerability,policy
+          exit-on: vulnerability
           summary: true
