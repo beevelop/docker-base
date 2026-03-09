@@ -65,7 +65,7 @@ jobs:
       - name: Build for PR
         id: docker_build_pr
         if: ${{ github.event_name == 'pull_request' }}
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: ./Dockerfile
@@ -81,7 +81,7 @@ jobs:
       - name: Build and push
         id: docker_build
         if: ${{ github.event_name != 'pull_request' }}
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           file: ./Dockerfile
