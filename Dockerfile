@@ -1,5 +1,5 @@
 # hadolint ignore=DL3007
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 # Build arguments for reproducible builds
 ARG SOURCE_DATE_EPOCH
