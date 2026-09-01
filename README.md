@@ -12,7 +12,7 @@
 
 # Docker Ubuntu Base - Lightweight Development Foundation
 
-> Minimal Ubuntu 24.04 LTS Docker image optimized for development workflows, CI/CD pipelines, and as a foundation for other containerized applications.
+> Minimal Ubuntu 26.04 LTS Docker image optimized for development workflows, CI/CD pipelines, and as a foundation for other containerized applications.
 
 ## Usage
 
